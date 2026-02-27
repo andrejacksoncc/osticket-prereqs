@@ -301,7 +301,7 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <br />
 
-<img width="80%" height="80%" alt="40" src="https://github.com/user-attachments/assets/2687db39-1191-4463-b031-2d943cf7a077" />
+<img width="80%" height="80%" alt="41" src="https://github.com/user-attachments/assets/b541491e-f800-404c-8b8f-d6d26c6e771d" />
 
 - osTicket should now be installed.
 </p>
