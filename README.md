@@ -180,14 +180,136 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 </p>
 <br />
 
-<img width="80%" height="80%" alt="11" src="https://github.com/user-attachments/assets/e80ca45b-d99f-441b-904d-55067b9af77a" />
+<img width="80%" height="80%" alt="23" src="https://github.com/user-attachments/assets/9f0d4d07-05e3-4e21-8738-75f759fbf074" />
 
-- Extract the file "php-7.3.8-nts-Win32-VC15-x86" from the "osTicket-Installation-Files" folder into the newly created "PHP" folder on "Windows (C:)".
+- In the IIS Manager, on the left side, expand "sites" "Default Web Site" then click on "osTicket".
+- On the right side click "Browse".
 </p>
 <br />
 
-<img width="80%" height="80%" alt="12" src="https://github.com/user-attachments/assets/ad733f9c-b089-4f5d-b098-c15604783dda" />
+<img width="80%" height="80%" alt="24" src="https://github.com/user-attachments/assets/6644a6aa-4503-47b1-888e-4686126a3048" />
 
-- From the "osTicket-Intallation-Files" folder click "VC_redist.x86" and follow the prompts to install.
+- It should load the osTicket site and look like this.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="25" src="https://github.com/user-attachments/assets/78084d4f-5419-457e-85a4-959b17135e34" />
+
+- Go back to the IIS Manager and click on osTicket.
+- Click PHP Manager.
+- At the bottom of the page select "Enable or disable an extenstion"
+</p>
+<br />
+
+<img width="80%" height="80%" alt="26" src="https://github.com/user-attachments/assets/f14f9a69-0a0a-4773-8a7b-35637f5ef87a" />
+
+- Enable: php_imap.dll
+- Enable: php_intl.dll
+- Enable: php_opcache.dll
+</p>
+<br />
+
+<img width="80%" height="80%" alt="27" src="https://github.com/user-attachments/assets/52860c8b-3c27-47a9-9848-1b8aff120dfe" />
+
+- osTicket site should look like this now.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="28" src="https://github.com/user-attachments/assets/6913761f-ca73-4795-859a-144cab93a056" />
+
+- Rename: ost-config.php
+- From: C:\inetpub\wwwroot\osTicket\include\ost-sampleconfig.php
+- To: C:\inetpub\wwwroot\osTicket\include\ost-config.php
+</p>
+<br />
+
+<img width="80%" height="80%" alt="29" src="https://github.com/user-attachments/assets/3abcbc46-ae81-4a48-861e-cfb1192cf65e" />
+
+- Right click "ost-config.php" and go to properties.
+- Click "Security" then click "Advanced".
+</p>
+<br />
+
+<img width="80%" height="80%" alt="30" src="https://github.com/user-attachments/assets/446e5001-3c4e-48f0-876f-6a0320609d10" />
+
+- Click "Disable inheritance".
+- Click "Remove all inherited permissions from this object".
+</p>
+<br />
+
+<img width="80%" height="80%" alt="31" src="https://github.com/user-attachments/assets/04f22c04-7ea9-4dfc-931f-8aed6f26a348" />
+
+- Click "add" to add new permissions.
+- Click "Select a principal"
+- Type "everyone"
+</p>
+<br />
+
+<img width="80%" height="80%" alt="32" src="https://github.com/user-attachments/assets/2ad98eed-91da-424a-bbcc-6fb1e352c3a2" />
+
+- Check "Full control" at this screen then press ok.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="33" src="https://github.com/user-attachments/assets/4ddc6fec-0b0f-490d-b989-f051099306c9" />
+
+- Click "Apply"
+</p>
+<br />
+
+<img width="80%" height="80%" alt="34" src="https://github.com/user-attachments/assets/fc19d950-dc81-4355-8d38-7ddb78965830" />
+
+- Go back to this page and click continue.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="35" src="https://github.com/user-attachments/assets/8efa858d-a8ab-4002-8fa5-e7f4a7aa0bb6" />
+
+- Set up osTicket in the browser by filling in information.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="36" src="https://github.com/user-attachments/assets/3b22fd13-b37f-4978-ae4b-87e677d08ed1" />
+
+- From the "osTicket-Installation-Files" folder click "HeidiSQL_12.3.0.6589_Setup" and follow the prompts to install.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="37" src="https://github.com/user-attachments/assets/d81e9fb0-35f0-426b-a28e-8c454b31cefc" />
+
+- Once installation is complete click "New".
+- Enter "root" as your password.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="38" src="https://github.com/user-attachments/assets/12481c8e-94eb-4ead-b66e-60199fe510f2" />
+
+- Right click the "Unnamed" tab, select "create new", and then "database".
+</p>
+<br />
+
+<img width="80%" height="80%" alt="39" src="https://github.com/user-attachments/assets/44a5e1b2-c777-4914-8de6-be5ecdcbc649" />
+
+- Type in "osTicket" for the name and press ok.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="40" src="https://github.com/user-attachments/assets/5b035cfe-c8ec-4deb-8e70-987200e3c475" />
+
+- Back to the osTicket installer, fill out the database settings.
+- Click install.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="40" src="https://github.com/user-attachments/assets/2687db39-1191-4463-b031-2d943cf7a077" />
+
+- osTicket should now be installed.
+</p>
+<br />
+
+<img width="80%" height="80%" alt="42" src="https://github.com/user-attachments/assets/3200d15a-82f6-4e13-8163-957473fe2eec" />
+
+- Browse to your help desk login page: http://localhost/osTicket/scp/login.php
+- Login using your username and password.
 </p>
 <br />
