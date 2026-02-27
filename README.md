@@ -17,11 +17,11 @@ This tutorial outlines the prerequisites and installation of the open-source hel
 
 <h2>List of Prerequisites</h2>
 
-- the dog jumped over the bridge
-- Item 2
-- Item 3
-- Item 4
-- Item 5
+- PHP: A server-side scripting language needed for osTicket’s backend logic.
+- PHP Manager for IIS: Helps configure and manage PHP with IIS.
+- Rewrite Module: An IIS extension used for URL rewriting, required by osTicket.
+- Microsoft Visual C++ Redistributable: Supports running certain PHP components.
+- MySQL: The database server that stores all osTicket data (like tickets, users, etc.).
 
 <h2>Installation Steps</h2>
 
